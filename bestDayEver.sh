@@ -1,9 +1,11 @@
 #!/bin/bash
 
+name="Techies"
+
 # echo "What is your name?"
 # read name
 
-name=$1
+# name=$1
 
 echo "Good morning, $name!"
 sleep 1
