@@ -1,13 +1,17 @@
 #!/bin/bash
 
-echo "You Died"
+echo "You died"
 
-echo "Hey, do you like coffee? (y/n)"
-read answer
+# First beast battle
+echo "Choose your number? (0/1)"
+read human
 
-if [[ $answer == "y" ]]; then
-	echo "You are awesome!"
+beast=$(( $RANDOM % 2 ))
+echo "Beast number is: $beast".
+
+if [[ $human == $beast ]]; then
+	echo "Beast vanquished! Congrats fellow tarnished!"
 else
-	echo "Leave right now!!"
+	echo "You died."
 fi
 
