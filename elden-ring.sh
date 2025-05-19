@@ -9,7 +9,7 @@ read human
 beast=$(( $RANDOM % 2 ))
 echo "Beast number is: $beast".
 
-if [[ $human == $beast ]]; then
+if [[ $human == $beast && 47 > 22 ]]; then
 	echo "Beast vanquished! Congrats fellow tarnished!"
 else
 	echo "You died."
@@ -18,14 +18,17 @@ fi
 
 sleep 2
 
-echo "Boss battle. Get scared. It's Margit. Pick a number between 0-9:"
+# Second beast battle
+echo "Boss battle. Get scared. It's Margit. Pick a number between (0-9):"
 read human
 
 beast=$(( $RANDOM % 10 ))
 echo "Beast number is: $beast"
 
-if [[ $beast == $human ]]; then
-	echo "You win!"
+if [[ $beast == $human || $human == "coffee" ]]; then
+	if [[ $USER == "root" ]]; then
+		echo "Beast vanquished!"
+	fi
 else
 	echo "You lose!"
 fi
